@@ -6,19 +6,11 @@ resource "aws_cognito_user_pool_domain" "domain" {
   user_pool_id    = aws_cognito_user_pool.pool[0].id
 }
 
-
-
-
-# resource "aws_cognito_user_pool_domain" "amz_domain" {
-#   count        = !var.enabled || var.amz_domain_name == null || var.amz_domain_name == "" ? 0 : 1
-#   domain       = var.amz_domain_name
-#   user_pool_id = aws_cognito_user_pool.pool[0].id
-# }
-
-
-
-
-
+resource "aws_cognito_user_pool_domain" "amz_domain" {
+  count        = !var.enabled || var.amz_domain_prefix == null || var.amz_domain_prefix == "" ? 0 : 1
+  domain       = var.amz_domain_prefix
+  user_pool_id = aws_cognito_user_pool.pool[0].id
+}
 
 data "aws_route53_zone" "main" {
   count = var.create_custom_dns_record ? 1 : 0
@@ -37,25 +29,3 @@ resource "aws_route53_record" "auth" {
     zone_id = "Z2FDTNDATAQYW2"
   }
 }
-
-
-# AuthDummyRecord:
-#     Type: AWS::Route53::RecordSet
-#     Properties:
-#       HostedZoneId: !Ref DnsZoneId
-#       Name: !Sub "${AccountDnsZoneFqdn}"
-#       ResourceRecords:
-#         - 1.1.1.1
-#       TTL: 172800
-#       Type: A
-
-#   Route53Cloudfront:
-#     Condition: CreateCloudfrontDns
-#     Type: AWS::Route53::RecordSet
-#     Properties:
-#       HostedZoneId: !Ref DnsZoneId
-#       Name: !Sub "${AuthSubDomain}.${AccountDnsZoneFqdn}"
-#       Type: A
-#       AliasTarget:
-#         DNSName: !Ref CloudfrontAlias
-#         HostedZoneId: !Ref CloudfrontHostedZoneId

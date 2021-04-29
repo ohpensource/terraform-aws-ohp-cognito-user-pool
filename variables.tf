@@ -397,6 +397,12 @@ variable "create_custom_dns_record" {
   default     = false
 }
 
+variable "amz_domain_prefix" {
+  description = "A domain prefix for the Amazon Cognito domain - conflicts with Custom DNS"
+  type        = string
+  default     = null
+}
+
 #
 # aws_cognito_user_pool_client
 #
