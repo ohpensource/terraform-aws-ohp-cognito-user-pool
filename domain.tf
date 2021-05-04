@@ -4,6 +4,8 @@ resource "aws_cognito_user_pool_domain" "domain" {
   # domain = local.user_pool_domain
   certificate_arn = var.domain_certificate_arn
   user_pool_id    = aws_cognito_user_pool.pool[0].id
+
+  depends_on = [aws_route53_record.dummy]
 }
 
 resource "aws_cognito_user_pool_domain" "amz_domain" {
@@ -28,4 +30,13 @@ resource "aws_route53_record" "auth" {
     # This zone_id is fixed
     zone_id = "Z2FDTNDATAQYW2"
   }
+}
+
+resource "aws_route53_record" "dummy" {
+  count   = var.create_custom_dns_record ? 1 : 0
+  name    = var.domain
+  type    = "A"
+  zone_id = data.aws_route53_zone.main[0].zone_id
+  ttl     = "300"
+  records = ["1.2.3.4"]
 }
