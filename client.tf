@@ -28,6 +28,10 @@ resource "aws_cognito_user_pool_client" "client" {
       refresh_token = lookup(token_validity_units.value, "refresh_token", null)
     }
   }
+
+  depends_on = [
+    aws_cognito_resource_server.resource
+  ]
 }
 
 locals {
