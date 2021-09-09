@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.6.0
+
+- minor: merged in feature/enable_token_revocation (pull request #7)
+
 ## 0.5.0
 
 - minor: merged in feature/enable_token_revocation (pull request #6)
