@@ -481,11 +481,17 @@ variable "client_prevent_user_existence_errors" {
 variable "client_supported_identity_providers" {
   description = "List of provider names for the identity providers that are supported on this client"
   type        = list(string)
-  default     = []
+  default     = ["COGNITO"]
 }
 
 variable "client_write_attributes" {
   description = "List of user pool attributes the application client can write to"
+  type        = list(string)
+  default     = []
+}
+
+variable "client_enable_token_revocation" {
+  description = "List of app client enable-token-revocation set ups"
   type        = list(string)
   default     = []
 }
