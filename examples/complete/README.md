@@ -152,7 +152,7 @@ module "aws_cognito_user_pool_complete_example" {
       read_attributes                      = ["email"]
       supported_identity_providers         = []
       write_attributes                     = []
-      enable_token_revocation              = []
+      enable_token_revocation              = false
       access_validity                      = 1
       id_token_validity                    = 1
       refresh_token_validity               = 60
@@ -176,7 +176,7 @@ module "aws_cognito_user_pool_complete_example" {
       refresh_token_validity               = 30
       supported_identity_providers         = []
       write_attributes                     = []
-      enable_token_revocation              = []
+      enable_token_revocation              = false
     },
     {
       allowed_oauth_flows                  = ["code", "implicit"]
@@ -192,7 +192,7 @@ module "aws_cognito_user_pool_complete_example" {
       refresh_token_validity               = 60
       supported_identity_providers         = []
       write_attributes                     = ["email", "gender", "locale", ]
-      enable_token_revocation              = []
+      enable_token_revocation              = true
     }
   ]
 
