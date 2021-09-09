@@ -491,9 +491,9 @@ variable "client_write_attributes" {
 }
 
 variable "client_enable_token_revocation" {
-  description = "List of app client enable-token-revocation set ups"
-  type        = list(string)
-  default     = []
+  description = "app client enable-token-revocation boolean to set up"
+  type        = bool
+  default     = false
 }
 
 variable "client_access_token_validity" {
