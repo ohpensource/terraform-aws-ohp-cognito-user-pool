@@ -10,7 +10,7 @@
 
 ## Version
 
-Current version: v0.6.0
+Current version: v0.6.1
 
 ## Description
 
