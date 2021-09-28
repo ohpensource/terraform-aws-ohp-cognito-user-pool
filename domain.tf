@@ -5,7 +5,7 @@ resource "aws_cognito_user_pool_domain" "domain" {
   certificate_arn = var.domain_certificate_arn
   user_pool_id    = aws_cognito_user_pool.pool[0].id
 
-  depends_on = [aws_route53_record.dummy]
+  # depends_on = [aws_route53_record.dummy]
 }
 
 resource "aws_cognito_user_pool_domain" "amz_domain" {
