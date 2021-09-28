@@ -601,3 +601,8 @@ variable "recovery_mechanisms" {
 }
 
 
+variable "create_dummy_record" {
+  type        = bool
+  description = "Create dummy DNS record for Cognito authentication"
+  default     = true
+}
