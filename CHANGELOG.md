@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.8.0
+
+- minor: merge branch 'feature/lanz-1284'
+
 ## 0.7.0
 
 - minor: merged in feature/lanz-1284 (pull request #9)
