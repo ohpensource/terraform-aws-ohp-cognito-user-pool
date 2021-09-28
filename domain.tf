@@ -33,7 +33,7 @@ resource "aws_route53_record" "auth" {
 }
 
 resource "aws_route53_record" "dummy" {
-  count   = var.create_custom_dns_record ? 1 : 0
+  count   = var.create_custom_dns_record && var.create_dummy_record ? 1 : 0
   name    = var.domain
   type    = "A"
   zone_id = data.aws_route53_zone.main[0].zone_id
