@@ -180,3 +180,4 @@ No modules.
 | <a name="output_resource_servers_scope_identifiers"></a> [resource\_servers\_scope\_identifiers](#output\_resource\_servers\_scope\_identifiers) | A list of all scopes configured in the format identifier/scope\_name |
 
 <!--- END_TF_DOCS --->
+.
