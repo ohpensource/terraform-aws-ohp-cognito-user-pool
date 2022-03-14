@@ -1,3 +1,9 @@
+# :confetti_ball: 1.0.2 (2022-03-14T07:09:57.588Z)
+- - -
+## :newspaper: Others
+* merge master
+- - -
+- - -
 # :confetti_ball: 1.0.1 (2021-11-18T15:02:34.020Z)
 - - -
 ## :bug: Fixes
