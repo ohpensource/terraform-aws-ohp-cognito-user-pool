@@ -1,3 +1,6 @@
+locals {
+  custom_domain_endpoint = var.create_custom_dns_record ? aws_route53_record.auth[0].name : null
+}
 output "id" {
   description = "The id of the user pool"
   value       = var.enabled ? aws_cognito_user_pool.pool[0].id : null
@@ -11,6 +14,11 @@ output "arn" {
 output "endpoint" {
   description = "The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy"
   value       = var.enabled ? aws_cognito_user_pool.pool[0].endpoint : null
+}
+
+output "custom_domain_endpoint" {
+  description = "The endpoint name of the user pool with the custom domain provided. Example format: {var.domain_hostname}.{var.domain}"
+  value       = var.enabled ? local.custom_domain_endpoint : null
 }
 
 output "creation_date" {
