@@ -170,6 +170,7 @@ No modules.
 | <a name="output_client_ids"></a> [client\_ids](#output\_client\_ids) | The ids of the user pool clients |
 | <a name="output_client_secrets"></a> [client\_secrets](#output\_client\_secrets) | The client secrets of the user pool clients |
 | <a name="output_creation_date"></a> [creation\_date](#output\_creation\_date) | The date the user pool was created |
+| <a name="output_custom_domain_endpoint"></a> [custom\_domain\_endpoint](#output\_custom\_domain\_endpoint) | The endpoint name of the user pool with the custom domain provided. Example format: {var.domain\_hostname}.{var.domain} |
 | <a name="output_domain_app_version"></a> [domain\_app\_version](#output\_domain\_app\_version) | The app version |
 | <a name="output_domain_aws_account_id"></a> [domain\_aws\_account\_id](#output\_domain\_aws\_account\_id) | The AWS account ID for the user pool owner |
 | <a name="output_domain_cloudfront_distribution_arn"></a> [domain\_cloudfront\_distribution\_arn](#output\_domain\_cloudfront\_distribution\_arn) | The ARN of the CloudFront distribution |
