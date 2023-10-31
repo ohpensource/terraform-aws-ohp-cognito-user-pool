@@ -1,3 +1,11 @@
+# :confetti_ball: 1.0.3 (2023-10-31T07:05:28.795Z)
+- - -
+## :bug: Fixes
+* CLD-5870 deleted duplicated property in var.password_policy
+## :newspaper: Others
+* terraform-docs: automated action
+- - -
+- - -
 # :confetti_ball: 1.0.2 (2022-03-14T07:09:57.588Z)
 - - -
 ## :newspaper: Others
